@@ -90,14 +90,14 @@ const [isOPen,setisOPen] = useState<boolean>(false)
             return (<>
             
               <div key={item._id} onClick={()=>toogler(item._id)}>
-                  <div className=' bg-zinc-500 p-2 shadow-md shadow-gray-700 hover:shadow-lg hover:shadow-gray-600 flex flex-col text-white rounded relative font-serif dark:shadow-md dark:shadow-slate-950 dark:hover:shadow-lg dark:hover:shadow-slate-950 dark:bg-[#282A3A] dark:text-slate-100'>
+                  <div className='  bg-[#FF9B9B] p-2 shadow-md dark:bg-[#282A3A] shadow-gray-700 hover:shadow-lg hover:shadow-gray-600 flex flex-col  text-white dark:text-slate-100 rounded relative font-serif dark:shadow-md dark:shadow-slate-950 dark:hover:shadow-lg dark:hover:shadow-slate-950'>
                     
                         <h1 className=' uppercase text-white font-bold'>{item.title}</h1>
                     
                       <p>RS {item.price}/--</p>
                       <div className='flex flex-row justify-between'>
 
-                        <button  className='rounded p-1 bg-gray-300 hover:bg-green-300 font-bold dark:bg-gray-600 dark:hover:bg-gray-700' >Detail</button>
+                        <button  className='rounded p-2 bg-[#FF6969]  hover:bg-red-500 font-bold dark:bg-gray-600 dark:hover:bg-gray-700' >Detail</button>
                       
                     
                       

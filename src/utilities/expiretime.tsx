@@ -1,16 +1,12 @@
 
 
-// const {userData} = useAppSelector(loginSelector);
+const loginTime = new Date().getTime();
 export function isSessionExpired(time:number | undefined) {
   
   if(time){
-    const loginTime =  time * 60 * 1000;
-    if (loginTime) {
-      const currentTime = new Date().getTime();
-      // const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-      return currentTime - loginTime > loginTime;
-    }
-    return true; // If loginTime is not set, consider the session as expired
+    const expireTime = time * 60 * 1000;
+     const expireSession = expireTime + loginTime;
+    return expireSession > new Date().getTime()?false:true; 
   }
   }
 

@@ -19,11 +19,9 @@ function App() {
   const {userData} = useAppSelector(loginSelector)
 
   useEffect(() => {
-    // console.log(typeof(userData?.expireTime))
-    // console.log(userData?.expireTime)
     const checkInterval = setInterval(() => {
+      console.log('this is expire time' + userData?.expireTime);
       if (isSessionExpired(userData?.expireTime)) {
-        console.log("User session has expired. Logging out...");
         dispatch(LogoutUser)
       
       }
@@ -39,7 +37,7 @@ function App() {
     
       
     <Navbar />
-    <main className='main-height text-[Poppines] bg-slate-200 dark:bg-[#1a1a1a]'>
+    <main className='main-height text-[Poppines] dark:bg-gradient-to-t dark:from-gray-700 dark:to-gray-600 bg-gradient-to-t from-blue-200  to-violet-200 '>
 
     <Routes>
       <Route path='/' element={<Home/>} />
